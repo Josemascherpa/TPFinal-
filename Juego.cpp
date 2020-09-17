@@ -26,7 +26,7 @@ int Juego::checkCollision(){//metodo para detectar las colisiones
 	int x3 = auto3->getX();
 	int y3 = auto3->getY();
 	
-	int ancho= 3;//Tamaño de la matriz
+	int ancho= 5;//Tamaño de la matriz
 	int alto = 4;
 	
 	if(x1 > (x2 - ancho) && x1 < (x2 + ancho) && y1 > (y2 - alto) && y1 < (y2 + alto)){
@@ -50,6 +50,9 @@ int Juego::play(){//Metodo con el que se maneja el juego, que es llamado en el m
 		auto1->update();//metodo movimiento auto 1.
 		auto2->update();//metodo movimiento auto 2.
 		auto3->update();//metodo movimiento auto 3.
+		if((auto2->getX() && auto2->getY()) == (auto3->getX() && auto3->getY())){
+			auto3->update();
+		}
 		
 		
 		if(checkCollision()==2){//si el metodo checkCollision devuelve 2, porque colisionamos con el auto 2
