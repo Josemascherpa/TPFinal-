@@ -26,7 +26,7 @@ void Auto2::update(){
 		y=y+1;//se le suma 1 en Y
 		dibujar();//se vuelve a dibujar con la nueva coord
 		
-		if(y==52){//si la posicion en Y del auto es 52:
+		if(y==53){//si la posicion en Y del auto es 52:
 			contadorPuntos2++;//si el auto 2 ya supero la posicion del auto 1, se suma 1 punto
 			borrar();//borra el auto2 en esa posicion			
 			y=30;//Se le asigna nueva posicion en Y

@@ -22,7 +22,7 @@ void Auto3::update(){//Movimiento automatico
 		x = x - (-1+rand()%3);//Se le coloca un random en X para generar los movimientos hacia los costados
 		dibujar();//Se lo dibuja
 		
-		if(y==52 || x==7 || x==60){
+		if(y==53 || x==7 || x==60){
 			contadorPuntos3++;
 			borrar();			
 			y=30;

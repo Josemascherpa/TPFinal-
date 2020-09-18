@@ -127,44 +127,44 @@ void Juego::Puntaje(){//metodo para manejar el puntaje
 	}
 	
 	
-	gotoxy(80,30);//En esta posicion se muestra el puntaje.
+	gotoxy(75,52);//En esta posicion se muestra el puntaje.
 	cout<<"Puntaje:"<<contadorPuntos;
 }
 void Juego::Mapeado(){//Metodo de dibujo de calle y texto.
 	
-	gotoxy(80,32);//Posicion donde se muentra el texto
+	gotoxy(77,44);//Posicion donde se muentra el texto
 	cout<<"TP Final: El auto se mueve con las letras A y D, "<<endl;
-	gotoxy(80,33);
+	gotoxy(77,45);
 	cout<<"se debe esquivar los demas autos para obtener un puntaje,"<<endl;
-	gotoxy(80,34);
+	gotoxy(77,46);
 	cout<<"si choca contra otro auto pierde, cada 20 puntos se sube de nivel"<<endl;
-	gotoxy(80,35);
+	gotoxy(77,47);
 	cout<<"y se aumenta la velocidad de los autos."<<endl;
 	
 	
 	 
-	gotoxy(85,42);
-	cout<<"     _____              ";
-	gotoxy(85,43);
+	gotoxy(86,32);
+	cout<<"    _____ ";
+	gotoxy(86,33);
 	cout<<"	/ ____|             ";
-	gotoxy(85,44);
+	gotoxy(86,34);
 	cout<<"	| |     __ _ _ __   ";
-	gotoxy(85,45);
+	gotoxy(86,35);
 	cout<<"	| |    / _` | '__|  ";
-	gotoxy(85,46);
+	gotoxy(86,36);
 	cout<<"	| |___| (_| | |     ";
-	gotoxy(85,47);
-	cout<<"    \\_____\__,_|_|_|  "; 
+	gotoxy(86,37);
+	cout<<"   \\_____\__,_|_|_|  "; 
 	
 	
-	gotoxy(85,48);
-	cout<<" _ __ __ _  ___ ____  __ "; 
-	gotoxy(85,49);
+	gotoxy(85,38);
+	cout<<" _ __ __ _  ___ ____ __ "; 
+	gotoxy(85,39);
 	cout<<"| '__/ _` |/ __/ _ \ ' __|"; 
-	gotoxy(85,50);
-	cout<<"| | | (_| | (_|  __/  |   "; 
-	gotoxy(85,51);
-	cout<<"|_|  \\__,_|\___\\___| |_|   ";   
+	gotoxy(85,40);
+	cout<<"| | | (_| | (_ | __/| |   "; 
+	gotoxy(85,41);
+	cout<<"|_|  \\__,_|\___|\\___||_|   ";   
 
 
 	
