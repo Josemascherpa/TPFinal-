@@ -185,7 +185,7 @@ void Juego::Mapeado(){//Metodo de dibujo de calle y texto.
 	
 	
 	gotoxy(85,38);
-	cout<<" _ __ __ _  ___ ____ __ "; 
+	cout<<" _ __ __ _  ___ ____ ___ "; 
 	gotoxy(85,39);
 	cout<<"| '__/ _` |/ __/ _ \ ' __|"; 
 	gotoxy(85,40);

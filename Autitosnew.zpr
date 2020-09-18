@@ -15,7 +15,7 @@ tab_width=4
 tab_use_spaces=0
 explorer_path=.
 inherits_from=
-current_source=Auto3.cpp
+current_source=Juego.cpp
 path_char=\
 [source]
 path=main.cpp
@@ -39,7 +39,7 @@ cursor=29:24
 open=true
 [source]
 path=Juego.cpp
-cursor=153:1
+cursor=187:32
 open=true
 [source]
 path=Rueda.cpp
