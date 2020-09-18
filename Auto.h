@@ -26,7 +26,7 @@ public:
 	Auto();
 	void dibujar();
 	int getVel(){return velocidad;};
-	virtual void update();
+	void update();
 	int getX(){return x;}
 	int getY(){return y;}
 	

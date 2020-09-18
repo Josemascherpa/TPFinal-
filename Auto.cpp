@@ -81,6 +81,6 @@ void Auto::borrar(){//Metodo borrar, se borra la matriz en las coord necesarias,
 	}
 }
 
-void Auto::update(){}//Movimiento de cada auto.
+
 
 

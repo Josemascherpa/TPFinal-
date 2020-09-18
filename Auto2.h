@@ -14,10 +14,11 @@ public:
 	int contadorPuntos2=0;
 	Auto2(int,int,int);
 	Auto2();
-	void update();
-	void Choque();
+	virtual void update();
+	virtual void Choque();
 	int getPuntos(){return contadorPuntos2;};
 	void setVel(int);
+	
 	int getVel(){return vel1;};
 	
 };

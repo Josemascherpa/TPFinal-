@@ -7,7 +7,7 @@
 using namespace std;
 
 Auto2::Auto2(int vel,int y0, int col):Auto(vel,y0,col){
-	x0=11+(rand()%52);//Se coloca un numero random en la posicion X para respawnear el autito
+	x0=11+(rand()%49);//Se coloca un numero random en la posicion X para respawnear el autito
 	x=x0;//Se iguala el numero rand a la X
 	vel1=vel;
 	col1=col;
@@ -30,7 +30,7 @@ void Auto2::update(){
 			contadorPuntos2++;//si el auto 2 ya supero la posicion del auto 1, se suma 1 punto
 			borrar();//borra el auto2 en esa posicion			
 			y=30;//Se le asigna nueva posicion en Y
-			x0=11+(rand()%50);//Se le asigna una Posicion random en X
+			x0=11+(rand()%49);//Se le asigna una Posicion random en X
 			x=x0;
 			dibujar();//Y se vuelve a dibujar en esas nuevas coordenadas
 			
