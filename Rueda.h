@@ -6,10 +6,13 @@ protected:
 	
 	
 public:
+	int matriz[1][1];
+	int color[1][1];
 	Rueda(int, int ,int);
 	Rueda();
 	void update();
-	void Choque();
+	void borrar();
+	void dibujar();
 };
 
 #endif

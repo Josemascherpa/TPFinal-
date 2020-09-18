@@ -14,7 +14,7 @@ Juego::Juego(){
 	auto1 = new Auto1(3,50,10);//Se generan los objetos en el constructor de juego
 	auto2 = new Auto2 (200,30,14);
 	auto3 = new Auto3(150,30,12);
-	rueda = new Rueda(450,30,14);
+	rueda = new Rueda(400,30,14);
 	
 }
 
@@ -39,7 +39,7 @@ int Juego::checkCollision(){//metodo para detectar las colisiones
 	if(x1 > (x3 - ancho) && x1 < (x3 + ancho) && y1 > (y3 - alto) && y1 < (y3 + alto)){
 		return 3;//se compara siempre Las coordenadas del auto1 con el auto3, para ver si coinciden
 	}//retorna 3 si el auto con el que se colisiona es el 3.
-	if(x1 > (x4 - 3) && x1 < (x4 + 3) && y1 > (y4 - 2) && y1 < (y4 + 2)){
+	if(x1 > (x4 - 5) && x1 < (x4 + 2) && y1 > (y4 - 3) && y1 < (y4 + 2)){
 		return 4;
 	}
 	
@@ -65,13 +65,13 @@ int Juego::play(){//Metodo con el que se maneja el juego, que es llamado en el m
 		
 		if(checkCollision()==2){//si el metodo checkCollision devuelve 2, porque colisionamos con el auto 2
 			auto2->Choque();//se llama al metodo choque, para dar vuelta la matriz del auto2 como si chocamos
-			//gameon = true;//Termina el juego.
+			gameon = true;//Termina el juego.
 			
 		}
 		
 		if(checkCollision()==3){//si el metodo checkCollision devuelve 3, porque colisionamos con el auto 3
 			auto3->Choque();//se llama al metodo choque, para dar vuelta la matriz del auto2 como si chocamos
-			//gameon=true;
+			gameon=true;
 		}
 		if(checkCollision()==4){
 			rueda->Choque();
@@ -83,7 +83,7 @@ int Juego::play(){//Metodo con el que se maneja el juego, que es llamado en el m
 	
 }
 void Juego::Puntaje(){//metodo para manejar el puntaje
-	int contadorPuntos = auto2->getPuntos()+auto3->getPuntos();//suma de puntajes de cada auto
+	int contadorPuntos = auto2->getPuntos()+auto3->getPuntos() + rueda->getPuntos();//suma de puntajes de cada auto
 	
 	switch(contadorPuntos){//Suma de velocidad de 20 en 20, de cada auto, seteando la velocidad de cada uno.
 		case 20:
@@ -140,6 +140,34 @@ void Juego::Mapeado(){//Metodo de dibujo de calle y texto.
 	cout<<"si choca contra otro auto pierde, cada 20 puntos se sube de nivel"<<endl;
 	gotoxy(80,35);
 	cout<<"y se aumenta la velocidad de los autos."<<endl;
+	
+	
+	 
+	gotoxy(85,42);
+	cout<<"     _____              ";
+	gotoxy(85,43);
+	cout<<"	/ ____|             ";
+	gotoxy(85,44);
+	cout<<"	| |     __ _ _ __   ";
+	gotoxy(85,45);
+	cout<<"	| |    / _` | '__|  ";
+	gotoxy(85,46);
+	cout<<"	| |___| (_| | |     ";
+	gotoxy(85,47);
+	cout<<"    \\_____\__,_|_|_|  "; 
+	
+	
+	gotoxy(85,48);
+	cout<<" _ __ __ _  ___ ____  __ "; 
+	gotoxy(85,49);
+	cout<<"| '__/ _` |/ __/ _ \ ' __|"; 
+	gotoxy(85,50);
+	cout<<"| | | (_| | (_|  __/  |   "; 
+	gotoxy(85,51);
+	cout<<"|_|  \\__,_|\___\\___| |_|   ";   
+
+
+	
 	
 	for (int i=30;i<=60;i++){//Dibujo de limites
 		putchxy(5,i,'|');

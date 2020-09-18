@@ -8,40 +8,28 @@ using namespace std;
 
 Rueda::Rueda(int vel, int y0, int col): Auto2(vel,y0,col){
 	
+	matriz[1][1];
+	color[1][1];
 	
-	matriz[0][0]=' ';  color[0][0] = 8;//MATRIZ QUE SE DIBUJA EN TODOS LOS AUTOS
-	matriz[0][1]=219; color[0][1] = Color;
-	matriz[0][2]=' '; color[0][2] = 8;
-	matriz[0][3]=' '; color[0][3] = Color;
-	matriz[1][0]=' ';  color[1][0] = Color;
-	matriz[1][1]=' '; color[1][1] = 8;
-	matriz[1][2]=' '; color[1][2] = Color;
-	matriz[1][3]=' '; color[1][3] = 8;
-	matriz[2][0]=' '; color[2][0] = Color;
-	matriz[2][1]=' '; color[2][1] = 8;
-	matriz[2][2]=' ';  color[2][2] = Color;
-	matriz[2][3]=' '; color[2][3] = 8;
-	matriz[3][0]=' ';  color[3][0] = Color;
-	matriz[3][1]=' '; color[3][1] = 8;
-	matriz[3][2]=' '; color[3][2] = Color;
-	matriz[3][3]=' '; color[3][3] = 8;
-	matriz[4][0]=' ';  color[4][0] = 8;
-	matriz[4][1]=' '; color[4][1] = Color;
-	matriz[4][2]=' '; color[4][2] = 8;
-	matriz[4][3]=' '; color[4][3] = Color;
-	dibujar();
+	matriz[0][0] = 219;color[0][0]=col1;
+	matriz[0][1]=219;color[0][1]=col1;
+	matriz[1][0] = 219;color[1][0]=col1;
+	matriz[1][1]=219;color[1][1]=col1;
+	
+	
+	
 }
 
 Rueda::Rueda(){}
 
-void Rueda::update(){
+void Rueda::update(){//redefinido con polimorfismo
 	if(tempo+vel1<clock()){//Si el tiempo ya paso
 		
 		borrar();//Borra la matriz
 		y=y+1;//se le suma 1 en Y
 		dibujar();//se vuelve a dibujar con la nueva coord
 		
-		if(y==52){//si la posicion en Y del auto es 52:
+		if(y==54){//si la posicion en Y del auto es 52:
 			contadorPuntos2++;//si el auto 2 ya supero la posicion del auto 1, se suma 1 punto
 			borrar();//borra el auto2 en esa posicion			
 			y=30;//Se le asigna nueva posicion en Y
@@ -53,28 +41,29 @@ void Rueda::update(){
 		tempo = clock();
 	}
 	
-	
 }
-void Rueda::Choque(){
-	matriz[0][0]=' ';  color[0][0] = 8;//MATRIZ QUE SE DIBUJA EN TODOS LOS AUTOS
-	matriz[0][1]=219; color[0][1] = Color;
-	matriz[0][2]=' '; color[0][2] = 8;
-	matriz[0][3]=' '; color[0][3] = Color;
-	matriz[1][0]=' ';  color[1][0] = Color;
-	matriz[1][1]=' '; color[1][1] = 8;
-	matriz[1][2]=' '; color[1][2] = Color;
-	matriz[1][3]=' '; color[1][3] = 8;
-	matriz[2][0]=' '; color[2][0] = Color;
-	matriz[2][1]=' '; color[2][1] = 8;
-	matriz[2][2]=' ';  color[2][2] = Color;
-	matriz[2][3]=' '; color[2][3] = 8;
-	matriz[3][0]=' ';  color[3][0] = Color;
-	matriz[3][1]=' '; color[3][1] = 8;
-	matriz[3][2]=' '; color[3][2] = Color;
-	matriz[3][3]=' '; color[3][3] = 8;
-	matriz[4][0]=' ';  color[4][0] = 8;
-	matriz[4][1]=' '; color[4][1] = Color;
-	matriz[4][2]=' '; color[4][2] = 8;
-	matriz[4][3]=' '; color[4][3] = Color;
-	dibujar();
+
+void Rueda::dibujar(){//Metodo dibujar, lo redefini con polimorfismo para esta clase nomas.
+	for(int i=0;i<2;i++){
+		for(int k=0;k<2;k++){
+			textcolor(color[1][1]);
+			putchxy(x+i,y+k,matriz[i][k]);
+		}
+		
+	}
+}
+
+/*
+METODO BORRAR
+*/
+
+void Rueda::borrar(){//Metodo borrar, lo redefini con polimorfismo para esta clase nomas.
+	
+	for (int i= 0; i<2; i++){
+		for (int k= 0; k<2; k++){
+			textcolor(color[1][1]);	
+			putchxy(x+i,y+k,' ');
+			
+		}
+	}
 }

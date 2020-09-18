@@ -15,7 +15,7 @@ public:
 	Auto2(int,int,int);
 	Auto2();
 	virtual void update();
-	virtual void Choque();
+	void Choque();
 	int getPuntos(){return contadorPuntos2;};
 	void setVel(int);
 	
