@@ -33,7 +33,7 @@ void Rueda::update(){//redefinido con polimorfismo
 			contadorPuntos2++;//si el auto 2 ya supero la posicion del auto 1, se suma 1 punto
 			borrar();//borra el auto2 en esa posicion			
 			y=30;//Se le asigna nueva posicion en Y
-			x0=11+(rand()%49);//Se le asigna una Posicion random en X
+			x0=11+rand()%(61+1-11);//Se le asigna una Posicion random en X
 			x=x0;
 			dibujar();//Y se vuelve a dibujar en esas nuevas coordenadas
 			

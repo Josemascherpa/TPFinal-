@@ -9,6 +9,7 @@ using namespace std;
 Auto3::Auto3 (int vel, int y0,int col) : Auto (vel,y0,col){
 	col1=col;
 	vel1=vel;
+	
 }
 
 Auto3::Auto3(){}
@@ -19,14 +20,14 @@ void Auto3::update(){//Movimiento automatico
 		
 		borrar();
 		y=y+1;
-		x = x - (-1+rand()%3);//Se le coloca un random en X para generar los movimientos hacia los costados
+		x = x - (-2+rand()%(2+1-(-2)));//Se le coloca un random en X para generar los movimientos hacia los costados
 		dibujar();//Se lo dibuja
 		
 		if(y==53 || x==7 || x==60){
 			contadorPuntos3++;
 			borrar();			
 			y=30;
-			x0=15+(rand()%40);
+			x0=20+rand()%(45+1-20);
 			x=x0;
 			dibujar();
 			

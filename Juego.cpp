@@ -12,9 +12,9 @@ using namespace std;
 
 Juego::Juego(){
 	auto1 = new Auto1(3,50,10);//Se generan los objetos en el constructor de juego
-	auto2 = new Auto2 (200,30,14);
+	auto2 = new Auto2 (150,30,14);
 	auto3 = new Auto3(150,30,12);
-	rueda = new Rueda(400,30,14);
+	rueda = new Rueda(300,30,14);
 	
 }
 
@@ -87,48 +87,75 @@ void Juego::Puntaje(){//metodo para manejar el puntaje
 	
 	switch(contadorPuntos){//Suma de velocidad de 20 en 20, de cada auto, seteando la velocidad de cada uno.
 		case 20:
-			auto2->setVel(160);
-			auto3->setVel(120);break;
-		case 40:
-			auto2->setVel(150);
-			auto3->setVel(110);break;
-		case 60:
+			gotoxy(75,53);
+			cout<<"Subiste al nivel 2.";
 			auto2->setVel(140);
-			auto3->setVel(100);break;
-		case 80:
-			auto2->setVel(130);
-			auto3->setVel(90);break;
-		case 100:
-			auto2->setVel(120);
-			auto3->setVel(80);break;
-		case 120:
+			auto3->setVel(120);break;
+			
+		case 40:
+			gotoxy(75,53);
+			cout<<"Subiste al nivel 3.";
+			auto2->setVel(125);
+			auto3->setVel(105);break;
+		case 60:
+			gotoxy(75,53);
+			cout<<"Subiste al nivel 4.";
 			auto2->setVel(110);
-			auto3->setVel(70);break;
-		case 140:
+			auto3->setVel(80);break;
+		case 80:
+			gotoxy(75,53);
+			cout<<"Subiste al nivel 5.";
 			auto2->setVel(100);
-			auto3->setVel(60);break;
-		case 160:
-			auto2->setVel(90);
-			auto3->setVel(50);break;
-		case 180:
+			auto3->setVel(70);break;
+		case 100:
+			gotoxy(75,53);
+			cout<<"Subiste al nivel 6.";
 			auto2->setVel(80);
-			auto3->setVel(40);break;
-		case 200:
+			auto3->setVel(65);break;
+		case 120:
+			gotoxy(75,53);
+			cout<<"Subiste al nivel 7.";
 			auto2->setVel(70);
-			auto3->setVel(30);break;
-		case 220:
+			auto3->setVel(55);break;
+		case 140:
+			gotoxy(75,53);
+			cout<<"Subiste al nivel 8.";
 			auto2->setVel(60);
-			auto3->setVel(20);break;
-		case 240:
+			auto3->setVel(45);break;
+		case 160:
+			gotoxy(75,53);
+			cout<<"Subiste al nivel 9.";
 			auto2->setVel(50);
+			auto3->setVel(40);break;
+		case 180:
+			gotoxy(75,53);
+			cout<<"Subiste al nivel 10.";
+			auto2->setVel(30);
+			auto3->setVel(25);break;
+		case 200:
+			gotoxy(75,53);
+			cout<<"Subiste al nivel 11.";
+			auto2->setVel(20);
+			auto3->setVel(20);break;
+		case 220:
+			gotoxy(75,53);
+			cout<<"Subiste al nivel 12.";
+			auto2->setVel(10);
 			auto3->setVel(10);break;
+		case 240:
+			gotoxy(75,53);
+			cout<<"Subiste al nivel 13.";
+			auto2->setVel(5);
+			auto3->setVel(3);break;
 		defautl:break;
 		
 	}
 	
-	
+		
 	gotoxy(75,52);//En esta posicion se muestra el puntaje.
 	cout<<"Puntaje:"<<contadorPuntos;
+	
+	
 }
 void Juego::Mapeado(){//Metodo de dibujo de calle y texto.
 	
