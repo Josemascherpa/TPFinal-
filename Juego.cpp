@@ -13,7 +13,7 @@ using namespace std;
 Juego::Juego(){
 	auto1 = new Auto1(3,50,10);//Se generan los objetos en el constructor de juego
 	auto2 = new Auto2 (150,30,14);
-	auto3 = new Auto3(150,30,12);
+	auto3 = new Auto3(125,30,12);
 	rueda = new Rueda(300,30,14);
 	
 }
@@ -169,7 +169,7 @@ void Juego::Mapeado(){//Metodo de dibujo de calle y texto.
 	cout<<"y se aumenta la velocidad de los autos."<<endl;
 	
 	
-	 
+	
 	gotoxy(86,32);
 	cout<<"    _____ ";
 	gotoxy(86,33);
